@@ -1,0 +1,253 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 60px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    text-align: left;
+    box-sizing: border-box;
+}
+.lock-label {
+	width:60%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+div{
+    display: block;
+}
+
+.service-qna_ask-table{
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(17, 17, 17);
+    line-height: 1.2;
+    border-width: 1px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.mgb10{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/* input{
+    width: 60%;
+    height: 20px;
+} */
+
+.mgb15{
+    font-size: 15px;
+}
+
+
+.qna-ask{
+    max-width: 800px;
+    width: 100%;
+    margin: 30px auto;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.from{
+    width: 100%;
+}
+
+.qna-ask-form{
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.form label{
+    width: 100px;
+    margin-right: 2px;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+/* .form textarea{
+	height: 30px;
+
+    padding-left: 10px;
+} */
+#product_name {
+	height: 20px;
+    width: auto;
+}
+#qna_title, #password{
+	height: 30px;
+    width: 87%;
+    border: 1px solid rgb(180, 180, 180);
+    font-size: 15px;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.form textarea{
+    resize: none;
+    height: 120px;
+    padding: 10px 5px;
+    width: 87%;
+    border: 1px solid rgb(180, 180, 180);
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.form .qna-ask-form-img input{
+    border: none;
+    padding: 10px;
+    width: 40%;
+    font-size: 13px;
+}
+
+.form .qna-ask-form select{
+	height: 30px;
+    width: 20%;
+    text-align: center;
+    border: 1px solid #b9b9b9;
+    border-radius: 6px;
+	margin-right: 10px;
+}
+
+
+
+
+.box-btn{
+    text-align: center;
+}
+
+.btn-text{
+    font-size: 15px;
+    padding: 10px 100px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 6px;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-text:focus{
+    outline: none;
+}
+
+.btn-text:hover{
+    background-color: black;
+    color: white;
+}
+
+.modal1 {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 10000;
+	display: none;
+}
+
+.modal2 {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 10000;
+	display: none;
+}
+
+
+.popup{
+	position: absolute;
+	left: 50%;
+    top: 75px;
+    width: 600px;
+    height: 150px;
+    background: white;
+	box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+	transform: translateX(-50%) translateY(-50%);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.6s;
+    z-index: 10000;
+}
+
+.popup a{
+    margin-left: 575px;
+}
+
+.close1 {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 5%;
+	left: 60%;
+}
+
+#pop1{
+    display: block;
+    width: 200px;
+    height: 35px;
+    background: rgb(0, 0, 0);
+    border-radius: 6px;
+    color: white;
+    margin-top: 30px;
+}
+
+.popup button{
+    margin-left: 190px;
+}
+#close-button1 {
+	width: auto;
+	height: auto;
+	background: #FFF;
+	border: 0px;
+	font-size: 40px;
+	cursor: pointer;
+}
+#close-button2 {
+	width: auto;
+	height: auto;
+	background: #FFF;
+	border: 0px;
+	font-size: 40px;
+	cursor: pointer;
+}
+.text111 {
+	justify-content: center;
+	margin-top: 20px;
+}
+.text01{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.lock-radio {
+	width: 7%;
+    height: 25px;
+    vertical-align: middle;
+	
+}
+
+.note-frame {
+	width: 45vw;
+}

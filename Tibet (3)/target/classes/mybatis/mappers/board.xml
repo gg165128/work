@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.board">
+
+<resultMap id="noticeResult" type="noticeVO">
+    <result property="notice_num" column="notice_num" />
+    <result property="notice_title" column="notice_title" />
+    <result property="notice_content" column="notice_content" />
+    <result property="notice_date" column="notice_date" />
+    <result property="notice_img" column="notice_img" />
+    <result property="user_id" column="user_id" />
+</resultMap>
+
+<resultMap id="qnaResult" type="qnaVO">
+    <result property="qna_num" column="qna_num" />
+    <result property="qna_title" column="qna_title" />
+    <result property="qna_content" column="qna_content" />
+    <result property="qna_date" column="qna_date" />
+    <result property="qna_lock" column="qna_lock" />
+    <result property="qna_img" column="qna_img" />
+    <result property="user_id" column="user_id" />
+    <result property="product_num" column="product_num" />
+</resultMap>
+
+<resultMap id="reviewResult" type="reviewVO">
+    <result property="review_num" column="review_num" />
+    <result property="review_title" column="review_title" />
+    <result property="review_img" column="review_img" />
+    <result property="review_content" column="review_content" />
+    <result property="review_usesize" column="review_usesize" />
+    <result property="review_height" column="review_height" />
+    <result property="review_weight" column="review_weight" />
+    <result property="review_date" column="review_date" />
+    <result property="user_id" column="user_id" />
+    <result property="product_num" column="product_num" />
+</resultMap>
+
+<select id="selectProdQnasList" resultMap="qnaResult">
+    <![CDATA[
+     	select * from qna where qna.product_num=#{product.product_num} order by qna_date desc 
+    ]]>
+</select>
+
+<select id="selectProdReviewsList" resultMap="reviewResult">
+    <![CDATA[
+     	select * from review where review.product_num=#{product.product_num} order by review_date desc
+    ]]>
+</select>
+
+<select id="selectAllNoticesList" resultType="hashmap" parameterType="hashmap">
+    <![CDATA[
+     	SELECT cast(@num:=@num+1 AS signed integer) AS num,notice_num,notice_title,notice_content,user_id,cast(notice_date AS DATE) as notice_date
+		FROM (SELECT @num:=(#{pageStart}/#{perPageNum})*(${perPageNum})) AS n, notice
+		ORDER BY notice_date DESC
+		LIMIT #{pageStart}, #{perPageNum}
+    ]]>
+</select>
+<select id="countNoticeList" resultType="Integer">
+    <![CDATA[
+        SELECT
+            count(*)
+        FROM
+            notice
+    ]]>
+</select>
+<select id="noticeDetail" resultType="com.myspring.tibet.board.vo.NoticeVO">
+			select notice_num,notice_title, notice_content, cast(notice_date AS DATE) as notice_date, notice_img, user_id from notice where notice_num=#{notice_num}
+</select>
+
+<select id="selectAllQnasList" resultType="hashmap" parameterType="hashmap">
+    <![CDATA[
+     	SELECT cast(@num:=@num+1 AS signed integer) AS num,qna_num,qna_title,qna_img,qna_lock,qna_content,user_id,qna_pw,cast(qna_date AS DATE) as qna_date
+		FROM (SELECT @num:=(#{pageStart}/#{perPageNum})*(${perPageNum})) AS n, qna
+		ORDER BY qna_date DESC
+		LIMIT #{pageStart}, #{perPageNum}
+    ]]>
+</select>
+<insert id="insertQnaWritePage" parameterType="qnaVO">
+	<![CDATA[
+     	insert into qna(qna_num, qna_title, qna_content, qna_pw, qna_lock, qna_img, user_id, product_num)
+     	values(#{qna_num}, #{qna_title}, #{qna_content}, #{qna_pw}, #{qna_lock}, #{qna_img}, #{user_id}, #{product_num})
+    ]]>
+</insert>
+
+<select id="countQnaList" resultType="Integer">
+    <![CDATA[
+        SELECT
+            count(*)
+        FROM
+            qna
+    ]]>
+</select>
+<select id="qnaDetail" resultType="com.myspring.tibet.board.vo.QnaVO">
+			select qna_num,qna_pw,qna_title, qna_content, cast(qna_date AS DATE) as qna_date, qna_img, user_id from qna where qna_num=#{qna_num}
+</select>
+<update id="modifyQna" parameterType="qnaVO">
+	<![CDATA[
+		update qna set qna_title=#{qna_title},qna_lock=#{qna_lock},qna_pw=#{qna_pw},qna_img=#{qna_img},qna_date=#{qna_date} where qna_num=#{qna_num}
+	]]>
+</update>
+<delete id="deleteQna" parameterType="Integer">
+<![CDATA[
+		delete from qna where qna_num=#{qna_num}
+	]]>
+</delete>
+
+
+</mapper>

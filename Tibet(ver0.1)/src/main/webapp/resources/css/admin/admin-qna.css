@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+div{
+    display: block;
+}
+
+a:hover{
+    text-decoration: underline black;
+}
+
+.total-box{
+    margin: 0%;
+    padding: 0%;
+}
+
+.sidebar{
+    display: flex;
+    background-color: #f0f0f0;
+    width: 10%;
+    height: 700px;
+    float: left;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.sidebar table{
+    margin: 15px;
+}
+
+.sidebar ul{
+    font-size: 15px;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.sidebar li{
+    font-size: 13px;
+    padding-left: 37px;
+    padding-top: 10px;
+}
+
+.content{
+    width: 88%;
+    height: 175px;
+    float: right;
+}
+
+.table-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    height: 50px;
+    border-radius: 16px;
+    width: 100%;
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+
+.table-cont{
+    margin: 2% 0% 0% 0%;
+    width: 100%;
+}
+
+.table-cont-btn{
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-text{
+    font-size: 13px;
+    padding: 5px 12px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.btn-text:focus{
+    outline: none;
+}
+
+.btn-text:hover{
+    background-color: black;
+    color: white;
+}
+
+.btn-text .b01{
+    padding-left: 50px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.mgb10{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.mgb15{
+    font-size: 15px;
+    margin-bottom: 0px;
+    line-height: 3.5;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.mgb20{
+    font-size: 12px;
+    margin-bottom: 0px;
+    line-height: 3;
+}
+
+.service-qna{
+    padding: 0px 0px;
+}
+
+.service-qna-front{
+    width: 100%;
+}
+
+.service-qna-front th, td{
+    border-bottom: 1px solid #999;
+}
+
+.not-tit{
+    letter-spacing: 20px;
+}
+
+.service-qna-front{
+    text-align: center;
+}
+
+.service-qna-front tbody tr .mgb20-txt{
+    text-align: left;
+    padding-left: 100px;
+}
+
+.service-qna-front tbody tr .mgb20-txt:hover{
+    text-decoration: underline;
+}
+
+.not-no{
+    width: 3%;
+    border-right: 1px solid #999;
+}
+
+.service-qna-front img{
+    padding-top: 10px;
+}
+
+.service-qna-front .inpbtn{
+    font-size: 10px;
+    padding: 4px 7px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.service-qna-front .inpbtn:focus{
+    outline: none;
+}
+
+.service-qna-front .inpbtn:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.service-qna-front .inpbtn01{
+    font-size: 10px;
+    padding: 4px 7px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.service-qna-front .inpbtn01:focus{
+    outline: none;
+}
+
+.service-qna-front .inpbtn01:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.content .paging{
+    margin-top: 55px;
+    font-size: 0px;
+    text-align: center;
+    color: rgb(150 150 150);
+}
+
+.content .paging a{
+    display: inline-block;
+    margin-left: 5px;
+    padding: 5px 7px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.content .paging a:hover{
+    text-decoration: underline;
+}
+
+.content .paging .num-on{
+    color: black;
+    font-weight: 700;
+}
+

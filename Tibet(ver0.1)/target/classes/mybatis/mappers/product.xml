@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mappers.product">
+<!-- 	리절트 맵 정의
+	<resultMap id="productResult" type="productVO">
+		<result property="product_num" column="product_num" />
+		<result property="product_name" column="product_name" />
+		<result property="product_price" column="product_price" />
+		<result property="product_color" column="product_color" />
+		<result property="product_size" column="product_size" />
+		<result property="product_detail" column="product_detail" />
+		<result property="product_date" column="product_date" />
+		<result property="product_thumbnail" column="product_thumbnail" />
+		<result property="product_img1" column="product_img1" />
+		<result property="product_img2" column="product_img2" />
+		<result property="product_img3" column="product_img3" />
+		<result property="product_count" column="product_count" />
+	</resultMap> -->
+
+
+	<select id="productDetail"
+		resultType="com.myspring.tibet.product.vo.ProductVO">
+		select
+		product_num , product_name, product_price,
+		substring_index(product_color,",",1) as color1,
+		substring_index(substring_index(product_color,",",2),",",-1) as
+		color2,
+		substring_index(substring_index(product_color,",",3),",",-1) as color3,
+		substring_index(product_size,",",1) as size1,
+		substring_index(substring_index(product_size,",",2),",",-1) as size2,
+		substring_index(substring_index(product_size,",",3),",",-1) as size3,
+		product_detail,product_thumbnail,product_img1,product_img2,product_img3,main_category_num,
+		main_category_num
+		from product where product_num=#{product_num}
+	</select>
+	<select id="productListName"
+		resultType="com.myspring.tibet.product.vo.ProductVO">
+		select * , (case when sub_category_num = '101' then '신상품'
+		when sub_category_num = '201' then '재킷&amp;점퍼'
+		when sub_category_num = '202' then '코트'
+		when sub_category_num = '301' then '티셔츠'
+		when sub_category_num = '302' then '셔츠'
+		when sub_category_num = '303' then '후드&amp;맨투맨'
+		when sub_category_num = '304' then '니트&amp;가디건'
+		when sub_category_num = '305' then '조끼'
+		when sub_category_num = '401' then '팬츠'
+		when sub_category_num = '402' then '쇼츠'
+		when sub_category_num = '501' then '숄더백'
+		when sub_category_num = '502' then '백팩'
+		when sub_category_num = '503' then '크로스백'
+		when sub_category_num = '504' then '메신저백'
+		when sub_category_num = '601' then '모자'
+		when sub_category_num = '602' then '반지&amp;팔찌'
+		when sub_category_num = '603' then '선글라스'
+		when sub_category_num = '604' then '벨트'
+		when sub_category_num = '701' then '세일'
+		else '에러' end) as 'sub_category_name',
+		(case when main_category_num = '1' then 'NEW'
+		when main_category_num = '2' then 'OUTER'
+		when main_category_num = '3' then 'top'
+		when main_category_num = '4' then 'PANTS'
+		when main_category_num = '5' then 'BAG'
+		when main_category_num = '6' then 'ACC'
+		when main_category_num = '7' then 'SALE'
+		else'몰라' end) as 'main_category_name' from product where main_category_num
+		like '#{main_category_num}' ORDER BY product_name;
+	</select>
+	<select id="productListLowprice"
+		resultType="com.myspring.tibet.product.vo.ProductVO">
+		select product_num , product_name,
+		product_price,product_thumbnail,main_category_num, sub_category_num
+		from product ORDER BY product_price
+	</select>
+	<select id="productListHighprice"
+		resultType="com.myspring.tibet.product.vo.ProductVO">
+		select product_num , product_name,
+		product_price,product_thumbnail,main_category_num, sub_category_num
+		from product ORDER BY product_price DESC
+	</select>
+	<select id="productListNew"
+		resultType="com.myspring.tibet.product.vo.ProductVO">
+		select product_num , product_name,
+		product_price,product_thumbnail,product_date,main_category_num,
+		sub_category_num from product ORDER BY product_date DESC
+	</select>
+
+	<select id="mainCate"
+		resultType="com.myspring.tibet.product.vo.MainCateVO">
+		select * from main_category order by main_category_num
+	</select>
+
+</mapper>

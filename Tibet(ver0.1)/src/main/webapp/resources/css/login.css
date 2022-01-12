@@ -1,0 +1,101 @@
+.title {
+	width: 20%;
+	height: auto;
+	margin: 0 37%;
+	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.login-box{
+	width: 20%;
+	height: auto;
+	border: 1px solid #000000;
+	margin: 0 37%;
+	padding: 2% 4%;
+	border-radius: 6px;
+	padding-bottom: 180px;
+}
+
+.login-id{
+	margin-bottom: 20px;
+}
+
+.login-pw{
+	margin-bottom: 20px;
+}
+
+.login-text-box {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.href{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+.hover:hover{
+	text-decoration: underline;
+	color: #000000; 
+}
+
+.login-btn {
+	width: 28%;
+	height: 50px;
+	margin: 0px 37%;
+	border: none;
+	background-color: #1e1e1e;
+	border-radius: 6px;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+img{
+	background-size: 327px 42px;
+}
+
+.urls{
+	position: absolute;
+    left: 38.2%;
+}
+
+.kakao-btn{
+	border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.naver-btn{
+	border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.google-btn {
+	border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#naver_id_login{
+	display:none;
+}
+
+#naverLogin img{
+	width: 4vw;
+}
+
+

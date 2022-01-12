@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.member">
+	<resultMap id="memberResult" type="memberVO">
+		<result property="user_id" column="user_id" />
+		<result property="user_pw" column="user_pw" />
+		<result property="user_name" column="user_name" />
+		<result property="user_birth" column="user_birth" />
+		<result property="user_phone" column="user_phone" />
+		<result property="user_email" column="user_email" />
+		<result property="user_zip" column="user_zip" />
+		<result property="user_addr1" column="user_addr1" />
+		<result property="user_addr2" column="user_addr2" />
+		<result property="user_gender" column="user_gender" />
+		<result property="user_membership" column="user_membership" />
+		<result property="user_joinDate" column="user_joinDate" />
+		<result property="user_point" column="user_point" />
+		<result property="user_mailSend" column="user_mailSend" />
+	</resultMap>
+	<!-- 로그인 회원정보 조회문 -->
+	<select id="login" resultType="memberVO"
+		parameterType="java.util.Map">
+	    <![CDATA[
+			select * from tibetdb.user
+			 where user_id=#{user_id}
+			 and user_pw=#{user_pw}			 
+		]]>
+	</select>
+<!--  아이디 찾기  -->
+   <select id="findID" resultType="memberVO"
+      parameterType="String">
+       <![CDATA[
+         select * from tibetdb.user
+          where user_name=#{user_name}
+          and user_email=#{user_email}                   
+      ]]>      
+   </select>
+   
+   <!--  비밀번호 찾기  -->
+   <select id="findPW" resultType="memberVO"
+      parameterType="String">
+       <![CDATA[
+         select * from tibetdb.user
+          where user_id=#{user_id}
+          and user_name=#{user_name}
+          and user_email=#{user_email}                   
+      ]]>      
+   </select>
+	<!-- 회원가입 중복검사 -->
+   <select id="selectOverlappedID" parameterType="String"
+      resultType="String">
+     select case count(*) when 1 then 'true' when 0 then 'false' end
+      from tibetdb.user
+      where user_id = #{id}
+   </select>
+
+			<!-- properties파일에 있는 url 뒤에 ?allowMultiQueries=true 붙여넣기  -->
+	<delete id="deleteMember" parameterType="memberVO">
+		delete from user where user_id = #{user_id} AND user_pw = #{user_pw};
+	</delete>
+
+<insert id="insertNewMember" parameterType="memberVO">
+  <![CDATA[
+       insert into user(user_id, user_pw, user_name, user_birth, user_email, user_phone, user_gender, user_zip, user_addr1, user_addr2, user_mailSend)
+      values(#{user_id}, #{user_pw}, #{user_name}, #{user_birth}, #{user_email}, #{user_phone}, #{user_gender}, #{user_zip}, #{user_addr1}, #{user_addr2}, #{user_mailSend})                                    
+   ]]>
+</insert>
+
+	<select id="modifyMemberForm" resultType="memberVO"> 
+	SELECT * from user WHERE user_id=#{user_id}
+	</select>
+	
+	<update id="modifyMember" parameterType="memberVO">
+	<![CDATA[
+		update user set user_pw=#{user_pw}, user_birth=#{user_birth}, user_email=#{user_email}, user_phone=#{user_phone}, user_gender=#{user_gender}, user_zip=#{user_zip}, user_addr1=#{user_addr1}, user_addr2=#{user_addr2}, user_mailSend=#{user_mailSend} where user_id=#{user_id}
+	]]>
+	</update>
+</mapper>

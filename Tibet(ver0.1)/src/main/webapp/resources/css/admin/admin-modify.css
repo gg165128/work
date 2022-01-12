@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 메인 고정 */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+div{
+    display: block;
+}
+
+a:hover{
+    text-decoration: underline black;
+}
+
+.total-box{
+    margin: 0%;
+    padding: 0%;
+}
+
+.sidebar{
+    display: flex;
+    background-color: #f0f0f0;
+    width: 10%;
+    height: 700px;
+    float: left;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.sidebar table{
+    margin: 15px;
+}
+
+.sidebar ul{
+    font-size: 15px;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.sidebar li{
+    font-size: 13px;
+    padding-left: 37px;
+    padding-top: 10px;
+}
+
+.content{
+    width: 88%;
+    height: 80px;
+    float: right;
+}
+
+.table-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    height: 50px;
+    border-radius: 16px;
+    width: 100%;
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+
+
+
+
+/* admin regist css */
+
+.qna-ask-form{
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.qna-ask{
+    max-width: 500px;
+    width: 100%;
+    margin: 35px auto;
+    margin-top: 35px;
+    padding: 30px;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.from{
+    width: 100%;
+}
+
+.form label{
+    width: 100px;
+    margin-right: 2px;
+    font-size: 15px;
+}
+
+.form input{
+    width: 75%;
+    border: 2px solid rgb(180, 180, 180);
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.qna-ask-form01 input{
+    width: 310px;
+}
+
+.qna-ask-form01 label{
+    padding-right: 65px;
+}
+
+.qna-ask-form01 .text01{
+    padding-right: 100px
+}
+
+
+.box-btn{
+    text-align: center;
+}
+
+.btn-text{
+    font-size: 13px;
+    padding: 10px 122px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
+
+.btn-text:focus{
+    outline: none;
+}
+
+.btn-text:hover{
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,364 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.checkout-full-wrp {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto !important;
+    padding: 0;
+    padding-top: 12%;
+    font-family: 'Galano Grotesque',"Apple SD Gothic Neo","Noto Sans KR","Helvetica Neue",sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #444;
+}
+
+.checkout-header-wrp {
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 100px 150px 90px;
+}
+
+.checkout-header-text {
+    display: inline-flex;
+    margin: 0;
+}
+
+.f30-bd-111 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #111;
+    line-height: 1.2;
+}
+
+.checkout-info-wrp {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.checkout-wrp-left {
+    padding-right: calc(46.9% - 24px);
+}
+
+.left-section-box {
+    margin: 0px 0px 50px;
+    padding: 80px;
+    background-color: #f9f9f9;
+    border: 2px solid #cccccc;
+}
+
+.left-section-delivery-info {
+    width: auto;
+}
+
+.delivery-condition {
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.f20-bd-333 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+}
+
+.mgb20 {
+    margin-bottom: 20px;
+}
+
+.mgt10 {
+    margin-top: 20px;
+}
+
+.delivery-condition {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.delivery-condition-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.f25-bd-333 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+}
+
+.delivery-condition-info {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+
+.delivery-request {
+    margin: 25px 0 20px;
+}
+.f15-bd-333 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+}
+
+.btn-request {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    padding: 13px 12px 11px;
+    text-align: left;
+    background-color: #ee6868;
+}
+.btn-v2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    font-family: 'Galano Grotesque',"Apple SD Gothic Neo","Noto Sans KR","Helvetica Neue",sans-serif;
+    border: none;
+    background-color: transparent;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0;
+}
+.f13-555 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #555;
+    line-height: 1.2;
+}
+
+.delivery-user {
+    position: relative;
+    padding: 40px 0 0;
+    border-top: 1px solid #ececec;
+}
+
+
+.mgb20 {
+    margin-bottom: 20px;
+}
+
+.delivery-user-info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.mgb10 {
+    margin-bottom: 10px;
+}
+
+.info-type {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: normal;
+    color: rgb(138, 138, 138);
+}
+
+.info-value {
+    font-weight: normal;
+    color: #555;
+}
+
+.section-order-info {
+    width: auto;
+}
+
+.order-price-text {
+    margin: 0;
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.price-unit {
+    margin-left: 15px;
+}
+
+.f15-bd-purple {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ff5858;
+    line-height: 1.2;
+}
+
+.section-payment-info {
+    width: auto;
+}
+
+.section-payment-info-title {
+    border-bottom: 1px solid #b1b1b1;
+    padding-bottom: 10px;
+}
+
+.payment-type-list {
+    padding: 20px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mgl5 {
+    margin-left: 10px;
+}
+input[type='radio'] {
+   -webkit-appearance: none;
+   width: 16px;
+   height: 16px;
+   border: 1px solid rgb(192, 192, 192);
+   border-radius: 50%;
+   outline: none;
+}
+
+input[type='radio']:checked {
+   border: 1px solid rgb(0, 0, 0);
+}
+
+input[type='radio']:before {
+   content: '';
+   display: block;
+   width: 85%;
+   height: 85%;
+   margin: 8% auto;
+   border-radius: 50%;
+}
+
+input[type='radio']:checked:before {
+   width: 85%;
+   height: 85%;
+   margin: 8% auto;
+   border-radius: 50%;
+   background: rgb(0, 0, 0);
+}
+element.style {
+    position: absolute;
+    top: 67%;
+}
+.checkout-wrp-right {
+    position: fixed;
+    top: 43%;
+    left: calc(53.1% + 42px);
+    width: calc(53.1% - 42px);
+}
+
+.right-section-info {
+    max-width: 634px;
+    width: auto;
+    margin: 0;
+    margin-right: 70px;
+}
+
+.right-section-price-info {
+    background-color: #f9f9f9;
+    position: relative;
+    margin-right: 70px;
+    padding: 80px;
+    border: 2px solid #cccccc;
+}
+
+.expected-price-list {
+    padding: 20px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.expected-price-item {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f15-aaa {
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(138, 138, 138);
+    line-height: 1.2;
+}
+
+.f18-333 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.5;
+}
+
+.total-expected-price {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding-top: 20px;
+    display: block;
+    Width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #b1b1b1;
+}
+.total-expected-price-value {
+	float: right;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), 
+[type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn-order {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: rgb(17, 17, 17);
+    border: none;
+}
+.f18-bd-fff {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.2;
+}

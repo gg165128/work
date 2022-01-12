@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="baseLayout"
+		template="/WEB-INF/views/common/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="css"
+			value="/WEB-INF/views/common/css.jsp" />
+		<put-attribute name="js"
+			value="/WEB-INF/views/common/js.jsp" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/common/footer.jsp" />
+			
+	</definition>
+
+	<definition name="/main" extends="baseLayout">
+		<put-attribute name="title" value="The Tibet" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/main.jsp" />
+	</definition>
+
+	<definition name="/notice" extends="baseLayout">
+		<put-attribute name="title" value="공지사항" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/notice.jsp" />
+	</definition>
+	
+	<definition name="/noticeDetail" extends="baseLayout">
+		<put-attribute name="title" value="공지사항" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/noticeDetail.jsp" />
+	</definition>
+	<definition name="/qna" extends="baseLayout">
+		<put-attribute name="title" value="Q&amp;A" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/qna.jsp" />
+	</definition>
+	<definition name="/prodQnaWrite" extends="baseLayout">
+		<put-attribute name="title" value="상품 Q&amp;A 작성" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/productQnaWrite.jsp" />
+	</definition>
+	<definition name="/qnaWrite" extends="baseLayout">
+		<put-attribute name="title" value="상품 Q&amp;A 작성" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/qnaWrite.jsp" />
+	</definition>
+	<definition name="/qnaDetail" extends="baseLayout">
+		<put-attribute name="title" value="Q&amp;A 상세" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/qnaDetail.jsp" />
+	</definition>
+	<definition name="/qnaModifyForm" extends="baseLayout">
+		<put-attribute name="title" value="Q&amp;A 상세" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/qnaModify.jsp" />
+	</definition>
+	<definition name="/membership" extends="baseLayout">
+		<put-attribute name="title" value="멤버쉽 안내" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/service/membership.jsp" />
+	</definition>
+
+	<definition name="/memModifyForm" extends="baseLayout">
+		<put-attribute name="title" value="회원정보수정" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/memModifyForm.jsp" />
+	</definition>
+
+	<definition name="/signupForm" extends="baseLayout">
+		<put-attribute name="title" value="회원가입" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/signupForm.jsp" />
+	</definition>
+
+	<definition name="/login" extends="baseLayout">
+		<put-attribute name="title" value="로그인" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/login.jsp" />
+	</definition>
+
+	<definition name="/findID" extends="baseLayout">
+		<put-attribute name="title" value="아이디 찾기" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/findID.jsp" />
+	</definition>
+
+	<definition name="/findPW" extends="baseLayout">
+		<put-attribute name="title" value="비밀번호 찾기" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/findPW.jsp" />
+	</definition>
+
+	<definition name="/resultID" extends="baseLayout">
+		<put-attribute name="title" value="아이디 찾기 결과" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/resultID.jsp" />
+	</definition>
+
+	<definition name="/resultPW" extends="baseLayout">
+		<put-attribute name="title" value="비밀번호 찾기 결과" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/member/resultPW.jsp" />
+	</definition>
+
+	<definition name="/new" extends="baseLayout">
+		<put-attribute name="title" value="NEW" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/new.jsp" />
+	</definition>
+
+	<definition name="/outer" extends="baseLayout">
+		<put-attribute name="title" value="OUTER" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/outer.jsp" />
+	</definition>
+
+	<definition name="/outer-1" extends="baseLayout">
+		<put-attribute name="title" value="재킷&amp;점퍼" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/outer-1.jsp" />
+	</definition>
+
+	<definition name="/outer-2" extends="baseLayout">
+		<put-attribute name="title" value="코트" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/outer-2.jsp" />
+	</definition>
+
+	<definition name="/top" extends="baseLayout">
+		<put-attribute name="title" value="TOP" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/top.jsp" />
+	</definition>
+
+	<definition name="/top-1" extends="baseLayout">
+		<put-attribute name="title" value="티셔츠" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/top-1.jsp" />
+	</definition>
+
+	<definition name="/top-1-1" extends="baseLayout">
+		<put-attribute name="title" value="티셔츠" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/productDetail.jsp" />
+	</definition>
+
+	<definition name="/top-2" extends="baseLayout">
+		<put-attribute name="title" value="셔츠" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/top-2.jsp" />
+	</definition>
+
+	<definition name="/top-3" extends="baseLayout">
+		<put-attribute name="title" value="후드&amp;맨투맨" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/top-3.jsp" />
+	</definition>
+
+	<definition name="/top-4" extends="baseLayout">
+		<put-attribute name="title" value="니트&amp;가디건" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/top-4.jsp" />
+	</definition>
+
+	<definition name="/top-5" extends="baseLayout">
+		<put-attribute name="title" value="조끼" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/top-5.jsp" />
+	</definition>
+
+	<definition name="/pants" extends="baseLayout">
+		<put-attribute name="title" value="PANTS" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/pants.jsp" />
+	</definition>
+
+	<definition name="/pants-1" extends="baseLayout">
+		<put-attribute name="title" value="팬츠" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/pants-1.jsp" />
+	</definition>
+
+	<definition name="/pants-2" extends="baseLayout">
+		<put-attribute name="title" value="쇼츠" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/pants-2.jsp" />
+	</definition>
+
+	<definition name="/bag" extends="baseLayout">
+		<put-attribute name="title" value="BAG" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/bag.jsp" />
+	</definition>
+
+	<definition name="/bag-1" extends="baseLayout">
+		<put-attribute name="title" value="숄더 백" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/bag-1.jsp" />
+	</definition>
+
+	<definition name="/bag-2" extends="baseLayout">
+		<put-attribute name="title" value="백팩" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/bag-2.jsp" />
+	</definition>
+
+	<definition name="/bag-3" extends="baseLayout">
+		<put-attribute name="title" value="크로스 백" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/bag-3.jsp" />
+	</definition>
+
+	<definition name="/bag-4" extends="baseLayout">
+		<put-attribute name="title" value="메신저 백" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/bag-4.jsp" />
+	</definition>
+
+	<definition name="/acc" extends="baseLayout">
+		<put-attribute name="title" value="ACC" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/acc.jsp" />
+	</definition>
+
+	<definition name="/acc-1" extends="baseLayout">
+		<put-attribute name="title" value="모자" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/acc-1.jsp" />
+	</definition>
+
+	<definition name="/acc-2" extends="baseLayout">
+		<put-attribute name="title" value="반지&amp;팔찌" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/acc-2.jsp" />
+	</definition>
+
+	<definition name="/acc-3" extends="baseLayout">
+		<put-attribute name="title" value="선글라스" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/acc-3.jsp" />
+	</definition>
+
+	<definition name="/acc-4" extends="baseLayout">
+		<put-attribute name="title" value="벨트" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/acc-4.jsp" />
+	</definition>
+
+	<definition name="/sale" extends="baseLayout">
+		<put-attribute name="title" value="세일" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/sale.jsp" />
+	</definition>
+
+	<definition name="/cart" extends="baseLayout">
+		<put-attribute name="title" value="장바구니" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/cart.jsp" />
+	</definition>
+
+	<definition name="/order" extends="baseLayout">
+		<put-attribute name="title" value="주문하기" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/order/order.jsp" />
+	</definition>
+	<definition name="/orderList" extends="baseLayout">
+		<put-attribute name="title" value="주문목록" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/order/orderList.jsp" />
+	</definition>
+	<definition name="/productListNew" extends="baseLayout">
+		<put-attribute name="title" value="상품목록" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/new.jsp" />
+	</definition>
+
+	<definition name="/productListLowprice" extends="baseLayout">
+		<put-attribute name="title" value="상품목록" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/new.jsp" />
+	</definition>
+	
+		<definition name="/productListHighprice" extends="baseLayout">
+		<put-attribute name="title" value="상품목록" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/new.jsp" />
+	</definition>
+	
+		<definition name="/productListName" extends="baseLayout">
+		<put-attribute name="title" value="상품목록" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/pants.jsp" />
+	</definition>
+	
+	<definition name="/productDetail" extends="baseLayout">
+		<put-attribute name="title" value="상품상세" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/product/productDetail.jsp" />
+	</definition>
+</tiles-definitions>
